@@ -50,10 +50,10 @@ def makeSecondWindow():
     if window2 != current:
         label2w = tk.Label(window2, text= "Hello, " + entryVAR.get() + "!", font= ("Impact", 20))
         position_with_grid(label2w, row=1, column=1) 
-        label3w = tk.Label(window2, text= "BMI: " + str(float(entry2VAR.get()) / float(entry3VAR.get())**2) + "kg/m²", font= ("Impact", 15))
+        label3w = tk.Label(window2, text= "BMI: " + str(float(entry2VAR.get()) // float(entry3VAR.get())**2) + "kg/m²", font= ("Impact", 15))
         position_with_grid(label3w, row=2, column=1)
         
-    BMI = float(entry2VAR.get()) / float(entry3VAR.get())**2
+    BMI = float(entry2VAR.get()) // float(entry3VAR.get())**2
     if BMI > 30:
         label_BMISCORE = tk.Label(window2, text= "You are CLINICALLY OBESE!", font= "Impact")
         position_with_grid(label_BMISCORE, row=3, column=1)
